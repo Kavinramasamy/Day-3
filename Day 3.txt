@@ -1,0 +1,19 @@
+let obj1={name:"person 1",age:5};
+let obj2={age:5,name:"person 1"};
+var keys1=[];
+var keys2=[];
+var result="Equal";
+for(var i in obj1){
+    if(obj1[i]!==obj2[i]){
+        result="Not equal";
+        break;
+    }
+    keys1.push(i);
+}
+for(var j in obj2){
+    keys2.push(j);
+}if(keys1.length===keys2.length){
+    console.log(result);
+}else{
+    console.log("Not equal");
+}
